@@ -19,7 +19,7 @@ namespace DI
         {
         }
 
-        //[AwesomeConstructor]
+        [AwesomeConstructor]
         public Commerce9(int a)
         {
         }

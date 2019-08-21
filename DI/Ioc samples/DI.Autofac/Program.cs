@@ -203,18 +203,15 @@ namespace DI
                             break;
                         case "9":
                             #region constructor finder (Commerce9)
-                            builder.RegisterType<Commerce9>().WithParameters(new List<Autofac.Core.Parameter>() {
-                            new NamedParameter("a", 1),
-                            new NamedParameter("b", 1),
-                            new NamedParameter("c", 1),
-                            new NamedParameter("d", 1) });
+
                             #region fix
-                            builder.RegisterType<Commerce9>().WithParameters(new List<Autofac.Core.Parameter>() {
+                            builder.RegisterType<Commerce9>().PropertiesAutowired().WithParameters(new List<Autofac.Core.Parameter>() {
                                 new NamedParameter("a", 1),
                                 new NamedParameter("b", 1),
                                 new NamedParameter("c", 1),
                                 new NamedParameter("d", 1) }).FindConstructorsWith(new AwesomeConstructorFinder());
                             #endregion
+
                             builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
                                 .Where(t => t.Name.EndsWith("Processor"))
                                 .As(t => t.GetInterfaces().FirstOrDefault(
