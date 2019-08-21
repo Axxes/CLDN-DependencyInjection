@@ -2,9 +2,9 @@
 
 namespace DI.PoorMansContainer
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Container container = new Container();
             container.Register<IBillingProcessor, BillingProcessor>();

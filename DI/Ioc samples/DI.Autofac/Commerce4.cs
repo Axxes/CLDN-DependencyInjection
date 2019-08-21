@@ -10,8 +10,8 @@ namespace DI
             _SingleTester = singleTester;
         }
 
-        IProcessorLocator2 _ProcessorLocator;
-        ISingleTester _SingleTester;
+        private readonly IProcessorLocator2 _ProcessorLocator;
+        private readonly ISingleTester _SingleTester;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {
@@ -40,7 +40,7 @@ namespace DI
 
     public class SingleTester : ISingleTester
     {
-        int _Counter = 0;
+        private int _Counter = 0;
 
         public void DisplayCounter()
         {

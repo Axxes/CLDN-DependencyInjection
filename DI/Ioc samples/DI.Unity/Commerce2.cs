@@ -10,10 +10,10 @@ namespace DI.Unity
             _Logger = logger;
         }
 
-        IBillingProcessorFactory _BillingProcessorFactory;
-        ICustomer _Customer;
-        INotifier _Notifier;
-        ILogger _Logger;
+        private readonly IBillingProcessorFactory _BillingProcessorFactory;
+        private readonly ICustomer _Customer;
+        private readonly INotifier _Notifier;
+        private readonly ILogger _Logger;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {

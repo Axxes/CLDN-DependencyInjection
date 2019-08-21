@@ -3,9 +3,9 @@ using System;
 
 namespace DI.NInject
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             IKernel container = new StandardKernel();
             container.Bind<IBillingProcessor>().To<BillingProcessor>();

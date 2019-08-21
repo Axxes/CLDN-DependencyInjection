@@ -4,7 +4,7 @@ namespace DI
 {
     public class BillingProcessorWithParameter : IBillingProcessor
     {
-        private string _creditCardNumber = string.Empty;
+        private readonly string _creditCardNumber = string.Empty;
 
         public BillingProcessorWithParameter(string creditCardNumber)
         {

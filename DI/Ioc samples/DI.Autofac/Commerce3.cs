@@ -7,7 +7,7 @@ namespace DI
             _ProcessorLocator = processorLocator;
         }
 
-        IProcessorLocator _ProcessorLocator;
+        private readonly IProcessorLocator _ProcessorLocator;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {

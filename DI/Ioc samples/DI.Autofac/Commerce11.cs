@@ -2,7 +2,7 @@
 {
     public class Commerce11
     {
-        IBillingProcessor _BillingProcessor;
+        private readonly IBillingProcessor _BillingProcessor;
         public Commerce11(IBillingProcessor billingProcessor)
         {
             _BillingProcessor = billingProcessor;

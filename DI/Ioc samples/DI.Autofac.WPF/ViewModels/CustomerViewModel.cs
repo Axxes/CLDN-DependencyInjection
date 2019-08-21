@@ -12,7 +12,7 @@
             _CustomerModel = customerRepository.GetById(1);
         }
 
-        Customer _CustomerModel;
+        private readonly Customer _CustomerModel;
 
         public Customer CustomerModel
         {

@@ -2,7 +2,7 @@ namespace DI.WCF
 {
     public class SampleService : ISampleService
     {
-        IDependency _Dependency;
+        private readonly IDependency _Dependency;
 
         public SampleService(IDependency dependency)
         {

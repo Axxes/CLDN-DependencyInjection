@@ -10,10 +10,10 @@ namespace DI.Coupled
             _Logger = new Logger();
         }
 
-        BillingProcessor _BillingProcessor;
-        Customer _Customer;
-        Notifier _Notifier;
-        Logger _Logger;
+        private readonly BillingProcessor _BillingProcessor;
+        private readonly Customer _Customer;
+        private readonly Notifier _Notifier;
+        private readonly Logger _Logger;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {

@@ -7,7 +7,7 @@
             _BillingProcessor = billingProcessor;
         }
 
-        IBillingProcessor _BillingProcessor;
+        private readonly IBillingProcessor _BillingProcessor;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {

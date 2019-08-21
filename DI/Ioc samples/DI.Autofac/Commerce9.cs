@@ -20,8 +20,8 @@ namespace DI
         {
         }
 
-        IProcessorLocator _ProcessorLocator;
-        IEnumerable<IPostOrderPlugin> _Plugins;
+        private readonly IProcessorLocator _ProcessorLocator;
+        private readonly IEnumerable<IPostOrderPlugin> _Plugins;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {

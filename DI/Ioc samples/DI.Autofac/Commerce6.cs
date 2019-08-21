@@ -10,10 +10,10 @@ namespace DI
             _Logger = logger;
         }
 
-        IBillingProcessor _BillingProcessor;
-        ICustomerProcessor _Customer;
-        INotificationProcessor _Notifier;
-        ILoggingProcessor _Logger;
+        private readonly IBillingProcessor _BillingProcessor;
+        private readonly ICustomerProcessor _Customer;
+        private readonly INotificationProcessor _Notifier;
+        private readonly ILoggingProcessor _Logger;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {

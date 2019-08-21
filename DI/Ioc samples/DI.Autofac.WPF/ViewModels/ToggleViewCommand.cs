@@ -10,7 +10,7 @@ namespace DI.WPF.ViewModels
             _ViewModel = viewModel;
         }
 
-        MainWindowViewModel _ViewModel;
+        private readonly MainWindowViewModel _ViewModel;
 
         public bool CanExecute(object parameter)
         {

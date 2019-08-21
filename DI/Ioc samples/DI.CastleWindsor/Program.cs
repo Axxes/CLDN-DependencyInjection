@@ -4,9 +4,9 @@ using System;
 
 namespace DI.CastleWindsor
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             WindsorContainer container = new WindsorContainer();
             container.Register(Component.For<Commerce>()); // first class needs to be registered as well

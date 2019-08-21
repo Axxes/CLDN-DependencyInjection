@@ -7,7 +7,7 @@ namespace DI.Autofac.AspNetMVC.Controllers
 {
     public class HomeController : Controller
     {
-        ICustomerRepository _CustomerRepository;
+        private readonly ICustomerRepository _CustomerRepository;
 
         public HomeController(ICustomerRepository customerRepository)
         {

@@ -10,9 +10,6 @@ namespace Locator.Simple
     internal class SimpleServiceLocator : ISimpleServiceLocator
     {
         private readonly Dictionary<Type, object> _services = new Dictionary<Type, object>();
-        private readonly object _lock = new object();
-
-        private bool _initialised;
 
         /// <summary>
         /// This property is purely for testing this class.

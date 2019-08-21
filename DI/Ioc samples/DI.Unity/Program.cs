@@ -7,7 +7,7 @@ namespace DI.Unity
     {
         public static UnityContainer Container;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Container = new UnityContainer();
 

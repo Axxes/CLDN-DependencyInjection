@@ -21,10 +21,9 @@ namespace DI.WPF.ViewModels
             ToggleViewCommand = new ToggleViewCommand(this);
         }
 
-        ICustomerListViewModel _CustomerListViewModel;
-        ICustomerViewModel _CustomerViewModel;
-
-        IViewModel _CurrentViewModel;
+        private readonly ICustomerListViewModel _CustomerListViewModel;
+        private readonly ICustomerViewModel _CustomerViewModel;
+        private IViewModel _CurrentViewModel;
 
         public ICommand ToggleViewCommand { get; private set; }
 

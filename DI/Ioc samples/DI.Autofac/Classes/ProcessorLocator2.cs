@@ -9,7 +9,7 @@ namespace DI
             ((IProcessorLocator2)this).CreateScope();
         }
 
-        ILifetimeScope _Scope = null;
+        private ILifetimeScope _Scope = null;
         void IProcessorLocator2.CreateScope()
         {
             _Scope = Program.Container.BeginLifetimeScope();

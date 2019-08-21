@@ -5,11 +5,11 @@ using System.ServiceModel;
 
 namespace DI.WCF
 {
-    class Program
+    internal class Program
     {
         public static IContainer Container;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             ContainerBuilder builder = new ContainerBuilder();
 

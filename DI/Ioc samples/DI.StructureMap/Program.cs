@@ -3,9 +3,9 @@ using System;
 
 namespace DI.StructureMap
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             Container container = new Container();
             container.Configure(reg => reg.For<IBillingProcessor>().Use<BillingProcessor>());

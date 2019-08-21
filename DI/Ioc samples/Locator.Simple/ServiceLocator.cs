@@ -23,6 +23,5 @@ namespace Locator.Simple
         {
             _locator.Set<T>(service);
         }
-
     }
 }

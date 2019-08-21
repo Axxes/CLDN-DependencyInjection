@@ -14,7 +14,7 @@ namespace DI.WPF.ViewModels
             _CustomersModel = customerRepository.GetAll();
         }
 
-        List<Customer> _CustomersModel;
+        private readonly List<Customer> _CustomersModel;
 
         public List<Customer> CustomersModel
         {

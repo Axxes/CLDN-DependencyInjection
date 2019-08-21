@@ -11,10 +11,10 @@ namespace DI.PoorMansContainer
             _Logger = logger;
         }
 
-        IBillingProcessor _BillingProcessor;
-        ICustomer _Customer;
-        INotifier _Notifier;
-        ILogger _Logger;
+        private readonly IBillingProcessor _BillingProcessor;
+        private readonly ICustomer _Customer;
+        private readonly INotifier _Notifier;
+        private readonly ILogger _Logger;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {
