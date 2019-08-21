@@ -1,9 +1,10 @@
 ﻿using System;
 using log4net;
+using PoetryReader.Core;
 
 namespace PoetryReader.Infrastructure
 {
-    public class ApplicationLogger<T> : Core.ILogger
+    public class ApplicationLogger<T> : ILogger
     {
         private static ILog _logger = LogManager.GetLogger(typeof(T));
 
