@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Api", "PoetryReaderApi\PoetryReader.Api.csproj", "{AA0DB036-2DF6-4324-8259-2F2134185A6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Core", "PoetryReader.Core\PoetryReader.Core.csproj", "{6DED2C1B-FC60-49AC-9D01-FA3317B45BF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Infrastructure", "PoetryReader.Infrastructure\PoetryReader.Infrastructure.csproj", "{FDE66928-CD19-4D92-9C9F-6346BADD0ED8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA0DB036-2DF6-4324-8259-2F2134185A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0DB036-2DF6-4324-8259-2F2134185A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0DB036-2DF6-4324-8259-2F2134185A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0DB036-2DF6-4324-8259-2F2134185A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DED2C1B-FC60-49AC-9D01-FA3317B45BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DED2C1B-FC60-49AC-9D01-FA3317B45BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DED2C1B-FC60-49AC-9D01-FA3317B45BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DED2C1B-FC60-49AC-9D01-FA3317B45BF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE66928-CD19-4D92-9C9F-6346BADD0ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE66928-CD19-4D92-9C9F-6346BADD0ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE66928-CD19-4D92-9C9F-6346BADD0ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE66928-CD19-4D92-9C9F-6346BADD0ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {502E6A8C-C287-4752-A6B9-4D5FD270A44F}
+	EndGlobalSection
+EndGlobal

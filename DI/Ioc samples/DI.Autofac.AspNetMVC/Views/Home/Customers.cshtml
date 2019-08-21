@@ -1,0 +1,19 @@
+﻿@model System.Collections.Generic.IEnumerable<DI.Autofac.AspNetMVC.Models.Customer>
+@{
+    var grid = new WebGrid(Model);
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @grid.GetHtml()
+    </div>
+    <br /><br />
+    <div>
+        @Html.ActionLink("Home", "Index")
+    </div>
+</body>
+</html>
