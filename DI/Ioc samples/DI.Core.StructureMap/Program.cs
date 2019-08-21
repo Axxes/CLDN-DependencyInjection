@@ -4,9 +4,9 @@ using System;
 
 namespace DI.Core.StructureMap
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             var serviceProvider = new ServiceCollection();
 
@@ -22,7 +22,7 @@ namespace DI.Core.StructureMap
                 config.Populate(serviceProvider);
             });
 
-            Console.WriteLine(".NET Core DI Container Example");
+            Console.WriteLine(".NET Core DI Container with StructureMap Example");
             Console.WriteLine();
 
             OrderInfo orderInfo = new OrderInfo()
