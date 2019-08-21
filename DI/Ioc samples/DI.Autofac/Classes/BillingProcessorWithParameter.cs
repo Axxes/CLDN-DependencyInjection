@@ -10,6 +10,7 @@ namespace DI
         {
             _creditCardNumber = creditCardNumber;
         }
+
         public void ProcessPayment(string customer, string creditCard, double price)
         {
             Console.WriteLine(string.Format("Billing for credit cards only!!! Payment processed for customer '{0}' on credit card '{1}' for {2:c}.", customer, _creditCardNumber, price));
