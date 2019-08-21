@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.4
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Essentials", "Essentials", "{D591E8EF-C2E4-4556-A805-F026435A84A4}"
 EndProject
@@ -46,6 +46,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern.Tests", "FactoryPattern.Tests\FactoryPattern.Tests.csproj", "{A3940724-BA4C-4F12-BB5C-0470534C58EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{90B6A308-BCA9-4E55-AE9D-0B157BBDF0E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI.Core", "DI.Core\DI.Core.csproj", "{E9292993-8903-485E-8429-73E3A8A095C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -227,6 +229,18 @@ Global
 		{90B6A308-BCA9-4E55-AE9D-0B157BBDF0E9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{90B6A308-BCA9-4E55-AE9D-0B157BBDF0E9}.Release|x86.ActiveCfg = Release|Any CPU
 		{90B6A308-BCA9-4E55-AE9D-0B157BBDF0E9}.Release|x86.Build.0 = Release|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Debug|x86.Build.0 = Debug|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Release|x86.ActiveCfg = Release|Any CPU
+		{E9292993-8903-485E-8429-73E3A8A095C2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -249,9 +263,11 @@ Global
 		{224E2AE9-7724-4D03-92A1-B057A8DCFDA3} = {A3080704-364B-40FC-AF6B-298F4F87DDED}
 		{A3940724-BA4C-4F12-BB5C-0470534C58EC} = {03A8B0C7-F008-46BC-BFF6-C00AF4389087}
 		{90B6A308-BCA9-4E55-AE9D-0B157BBDF0E9} = {03A8B0C7-F008-46BC-BFF6-C00AF4389087}
+		{E9292993-8903-485E-8429-73E3A8A095C2} = {DF98BB0F-26D1-4B82-B2A8-3359298A3B84}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+		SolutionGuid = {1B70AF09-B855-4F3A-9154-8CE48B012B67}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = DI.vsmdi

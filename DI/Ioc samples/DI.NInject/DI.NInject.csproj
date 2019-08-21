@@ -54,6 +54,7 @@
     <Compile Include="Classes\Logger.cs" />
     <Compile Include="Classes\Notifier.cs" />
     <Compile Include="Commerce.cs" />
+    <Compile Include="Customer.cs" />
     <Compile Include="Interfaces\IBillingProcessor.cs" />
     <Compile Include="Interfaces\ICustomer.cs" />
     <Compile Include="Interfaces\ILogger.cs" />
