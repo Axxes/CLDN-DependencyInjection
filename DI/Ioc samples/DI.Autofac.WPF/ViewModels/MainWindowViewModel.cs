@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Input;
 
 namespace DI.WPF.ViewModels
@@ -19,7 +16,7 @@ namespace DI.WPF.ViewModels
         {
             _CustomerListViewModel = customerListViewModel;
             _CustomerViewModel = customerViewModel;
-            
+
             CurrentViewModel = _CustomerListViewModel;
             ToggleViewCommand = new ToggleViewCommand(this);
         }
@@ -28,7 +25,7 @@ namespace DI.WPF.ViewModels
         ICustomerViewModel _CustomerViewModel;
 
         IViewModel _CurrentViewModel;
-        
+
         public ICommand ToggleViewCommand { get; private set; }
 
         public IViewModel CurrentViewModel
@@ -36,7 +33,7 @@ namespace DI.WPF.ViewModels
             get { return _CurrentViewModel; }
             set
             {
-            	_CurrentViewModel = value;
+                _CurrentViewModel = value;
                 OnPropertyChanged("CurrentViewModel");
             }
         }

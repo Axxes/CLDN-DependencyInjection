@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using DI.Abstraction;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using DI.Abstraction;
 
 namespace UnitTestProject1
 {
@@ -29,7 +29,7 @@ namespace UnitTestProject1
 
             commerce.ProcessOrder(new OrderInfo());
 
-            mockBilling.Verify(processor => processor.ProcessPayment(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<double>()), Times.Once); 
+            mockBilling.Verify(processor => processor.ProcessPayment(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<double>()), Times.Once);
         }
     }
 }

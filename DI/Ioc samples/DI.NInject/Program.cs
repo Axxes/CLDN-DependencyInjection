@@ -1,5 +1,5 @@
-﻿using System;
-using Ninject;
+﻿using Ninject;
+using System;
 
 namespace DI.NInject
 {

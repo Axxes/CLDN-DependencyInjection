@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace DI.WCF
 {
     public class SampleService : ISampleService

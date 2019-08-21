@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows;
+﻿using Autofac;
 using DI.WPF.ViewModels;
-using Autofac;
+using System.Windows;
 
 namespace DI.WPF
 {

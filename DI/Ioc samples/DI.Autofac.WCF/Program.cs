@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel;
-using Autofac;
+﻿using Autofac;
 using Autofac.Integration.Wcf;
+using System;
+using System.ServiceModel;
 
 namespace DI.WCF
 {

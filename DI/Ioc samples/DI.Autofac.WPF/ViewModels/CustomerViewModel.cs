@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace DI.WPF.ViewModels
+﻿namespace DI.WPF.ViewModels
 {
     public interface ICustomerViewModel : IViewModel
     {
         Customer CustomerModel { get; }
     }
-    
+
     public class CustomerViewModel : ViewModelBase, ICustomerViewModel
     {
         public CustomerViewModel(ICustomerRepository customerRepository)

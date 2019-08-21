@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Autofac;
+using Autofac.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Autofac;
-using Autofac.Core.Activators.Reflection;
-using Autofac.Core;
 
 namespace DI
 {
@@ -61,7 +60,7 @@ namespace DI
                             builder.RegisterType<CustomerProcessor>().As<ICustomerProcessor>();
                             builder.RegisterType<NotificationProcessor>().As<INotificationProcessor>();
                             builder.RegisterType<LoggingProcessor>().As<ILoggingProcessor>();
-                            
+
                             Container = builder.Build();
 
                             Commerce1 commerce1 = Container.Resolve<Commerce1>();
@@ -191,7 +190,7 @@ namespace DI
                                 .Where(t => t.Name.StartsWith("Plugin"))
                                 .As<IPostOrderPlugin>();
                             builder.RegisterType<ProcessorLocator>().As<IProcessorLocator>();
-                            
+
                             Container = builder.Build();
 
                             //Commerce8 commerce8 = new Commerce8();
@@ -245,7 +244,7 @@ namespace DI
 
                         case "11":
                             #region With multiple implementations (Commerce11)
-                        
+
                             builder.RegisterType<BillingProcessorWithParameter>()
                            .As<IBillingProcessor>()
                            .WithParameter(new TypedParameter(typeof(string), "349185362278235"))

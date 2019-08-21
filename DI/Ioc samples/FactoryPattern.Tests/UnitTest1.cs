@@ -1,9 +1,9 @@
-﻿using System.Linq;
-using System.Reflection;
-using FactoryPattern.Food;
+﻿using FactoryPattern.Food;
 using FactoryPattern.FoodFactories;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FactoryPattern.Tests.Properties;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+using System.Reflection;
 
 namespace FactoryPattern.Tests
 {

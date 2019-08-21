@@ -1,13 +1,10 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
 
 namespace DI
 {
     public class Commerce7
     {
-        public Commerce7(IProcessorLocator processorLocator, 
+        public Commerce7(IProcessorLocator processorLocator,
             IEnumerable<IPostOrderPlugin> plugins)
         {
             _ProcessorLocator = processorLocator;

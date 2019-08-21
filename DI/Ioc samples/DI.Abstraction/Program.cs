@@ -20,7 +20,7 @@ namespace DI.Abstraction
 
             Console.WriteLine("Production:");
             Console.WriteLine();
-            Commerce commerce = new Commerce(new BillingProcessor(), 
+            Commerce commerce = new Commerce(new BillingProcessor(),
                                              new Customer(),
                                              new Notifier(),
                                              new Logger());

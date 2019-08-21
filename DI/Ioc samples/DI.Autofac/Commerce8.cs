@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace DI
@@ -6,7 +5,7 @@ namespace DI
     public class Commerce8
     {
         public Commerce8()
-        {}
+        { }
 
         public IProcessorLocator _ProcessorLocator { get; set; }
         public IEnumerable<IPostOrderPlugin> _Plugins { get; set; }

@@ -1,6 +1,6 @@
-﻿using System;
-using Castle.MicroKernel.Registration;
+﻿using Castle.MicroKernel.Registration;
 using Castle.Windsor;
+using System;
 
 namespace DI.CastleWindsor
 {

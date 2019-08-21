@@ -1,6 +1,6 @@
-﻿using System.Linq;
+﻿using Autofac;
+using System.Linq;
 using System.Reflection;
-using Autofac;
 
 namespace DI
 {

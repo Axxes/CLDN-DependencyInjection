@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-
 namespace DI.PoorMansContainer
 {
     public class Commerce
     {
-        public Commerce(IBillingProcessor billingProcessor, 
+        public Commerce(IBillingProcessor billingProcessor,
             ICustomer customer, INotifier notifier, ILogger logger)
         {
             _BillingProcessor = billingProcessor;

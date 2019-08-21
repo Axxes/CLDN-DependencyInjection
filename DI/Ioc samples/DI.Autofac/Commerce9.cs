@@ -1,14 +1,10 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using Autofac;
 
 namespace DI
 {
     public class Commerce9
     {
-        
+
         public Commerce9(IProcessorLocator processorLocator, IEnumerable<IPostOrderPlugin> plugins)
         {
             _ProcessorLocator = processorLocator;
@@ -26,7 +22,7 @@ namespace DI
 
         IProcessorLocator _ProcessorLocator;
         IEnumerable<IPostOrderPlugin> _Plugins;
-        
+
         public void ProcessOrder(OrderInfo orderInfo)
         {
             IBillingProcessor billingProcessor = _ProcessorLocator.GetProcessor<IBillingProcessor>();
