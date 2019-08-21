@@ -3,7 +3,7 @@ using Unity;
 
 namespace DI.Unity
 {
-    public class Program
+    public static class Program
     {
         public static UnityContainer Container;
 
