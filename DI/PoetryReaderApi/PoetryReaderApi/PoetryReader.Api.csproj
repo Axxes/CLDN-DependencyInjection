@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PoetryReader.Core\PoetryReader.Core.csproj" />
+    <ProjectReference Include="..\PoetryReader.Infrastructure\PoetryReader.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

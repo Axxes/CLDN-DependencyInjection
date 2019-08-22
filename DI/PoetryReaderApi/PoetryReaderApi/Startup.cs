@@ -6,6 +6,8 @@ using Microsoft.Extensions.DependencyInjection;
 using StructureMap;
 using PoetryReader.Api;
 using System.Diagnostics;
+using PoetryReader.Core;
+using PoetryReader.Infrastructure;
 
 namespace PoetryReaderApi
 {
@@ -28,7 +30,8 @@ namespace PoetryReaderApi
             container.Configure(config =>
             {
                 config.AddRegistry<DefaultRegistry>();
-
+                config.AddRegistry<InfrastructureRegistry>();
+;
                 //Populate the container using the service collection
                 config.Populate(services);
             });

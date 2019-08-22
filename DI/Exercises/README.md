@@ -10,18 +10,30 @@ A console application using .NET Framework 4.8 is given.
 4. Add an abstraction layer for the core logic
 5. Switch to dependency injection (Autofac or Microsoft DI)
 6. Write unit tests
-6.1. Make sure CheckInProcessor.CheckIn is called with the correct object
-6.2. Make sure Notifier.Email is called with the correct arguments
+6.1. Make sure `CheckInProcessor.CheckIn` is called with the correct object
+6.2. Make sure `Notifier.Email` is called with the correct arguments
 
 ## Exercise 2
 
 A console application using .NET Core 2.2 is given.  Check the `DI.Exercises.2.Tests` class to inject your dependencies.
+**Note**: FeedbackProcessor = Singleton, Notifier = Transient, FakeDatabase = Scoped
 
 1. Create a hosted service called `FeedbackProcessor` , inheriting from `IFeedbackProcessor`
 1.1. Create a new collection to which you can add `DI.Exercises.Shared.Models.Feedback`
 1.2. Wait for three items to be added to the collection
 1.3. Created a new `INotifier` for each item
 1.4. Pass each item into its own Notifier
+1.5. Make sure the `FeedbackProcessorTests.AssertNotifyCalledThreeTimesPerBatch` test works.
+2. Implement FakeDatabase
+2.1. A static concurrent list should suffise to store `Feedback`
+3. Every `INotifier` has to pass on it's `Feedback` item to the `FakeDatabase` class. 
 
 Write tests to:
-1. Make sure 
+1. Make sure `Feedback` is properly passed on to `FakeDatabase` from `Notifier`
+2. Test the whole flow from Adding items to the Queue => Reading from the database
+
+If done, extend the exercise by allowing the `FeedbackProcessor` to handle `DI.Exercises.Shared.Models.CheckIn` 
+
+## Exercise 3
+
+Free to fill in. Make a pluggable application, injecting multiple `IPlugin`'s, handling specific sets of data, using Autofac.
