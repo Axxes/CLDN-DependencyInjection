@@ -4,13 +4,17 @@ using System.Threading.Tasks;
 using DI.Exercises._2.Abstractions;
 using System;
 using DI.Exercises.Shared.Models;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DI.Exercises._2.Implementations
 {
     public class FeedbackProcessor : IFeedbackProcessor
     {
-        public FeedbackProcessor()
+        private readonly IServiceProvider _serviceProvider;
+
+        public FeedbackProcessor(IServiceProvider serviceProvider)
         {
+            _serviceProvider = serviceProvider;
             Queue = new BlockingCollection<Feedback>();
         }
 
@@ -22,11 +26,24 @@ namespace DI.Exercises._2.Implementations
 
         public Task StartAsync(CancellationToken cancellationToken)
         {
-            var item1 = Queue.Take(cancellationToken);
-            var item2 = Queue.Take(cancellationToken);
-            var item3 = Queue.Take(cancellationToken);
+            Task.Run(() => Run(cancellationToken));
 
-            throw new NotImplementedException();
+            return Task.CompletedTask;
+        }
+
+        public void Run(CancellationToken cancellationToken)
+        {
+            while (!cancellationToken.IsCancellationRequested)
+            {
+
+                var items = new Feedback[] {
+                    Queue.Take(cancellationToken),
+                    Queue.Take(cancellationToken),
+                    Queue.Take(cancellationToken)
+                };
+
+                //throw new NotImplementedException();
+            }
         }
 
         public Task StopAsync(CancellationToken cancellationToken)

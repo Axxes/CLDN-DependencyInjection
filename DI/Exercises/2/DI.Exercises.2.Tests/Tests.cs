@@ -1,8 +1,11 @@
 using DI.Exercises._2.Abstractions;
 using DI.Exercises._2.Implementations;
+using DI.Exercises.Shared.Models;
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace DI.Exercises._2.Tests
 {
@@ -18,13 +21,13 @@ namespace DI.Exercises._2.Tests
             // Inject dependencies
             serviceCollection.AddSingleton<IFeedbackProcessor, FeedbackProcessor>();
             serviceCollection.AddScoped<IFakeDatabase, FakeDatabase>();
-            serviceCollection.AddTransient<IFakeDatabase, FakeDatabase>();
+            serviceCollection.AddTransient<INotifier, Notifier>();
 
             _serviceProvider = serviceCollection.BuildServiceProvider();
         }
 
         [Test]
-        public void Test1()
+        public async Task Test1()
         {
             Assert.Pass();
         }

@@ -8,6 +8,11 @@ namespace DI.Exercises._2.Implementations
     {
         private readonly IFakeDatabase _fakeDatabase;
 
+        public Notifier(IFakeDatabase fakeDatabase)
+        {
+            _fakeDatabase = fakeDatabase;
+        }
+
         public void Notify(Feedback feedbackItem)
         {
             _fakeDatabase.Save(feedbackItem);
