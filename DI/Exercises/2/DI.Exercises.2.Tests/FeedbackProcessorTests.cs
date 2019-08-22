@@ -24,7 +24,7 @@ namespace DI.Exercises._2.Tests
         }
 
         [Test]
-        public async Task AssertNotifiyCalledThreeTimesPerBatch()
+        public async Task AssertNotifyCalledThreeTimesPerBatch()
         {
             var mr = new MockRepository(MockBehavior.Strict);
 
