@@ -36,4 +36,4 @@ If done, extend the exercise by allowing the `FeedbackProcessor` to handle `DI.E
 
 ## Exercise 3
 
-Free to fill in. Make a pluggable application, injecting multiple `IPlugin`'s, handling specific sets of data, using Autofac.
+Free to fill in. Make a pluggable application, injecting multiple `IPlugin`'s, handling specific sets of data, using Autofac or custom reflection?
