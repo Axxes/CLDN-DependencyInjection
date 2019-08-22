@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using Moq;
 using DI.Exercises.Shared.Models;
 using System.Threading;
+using DI.Exercises._2.Implementations;
 
 namespace DI.Exercises._2.Tests
 {
-    public class Tests
+    public class FeedbackProcessorTests
     {
         private IServiceCollection _serviceCollection;
         private IServiceProvider _serviceProvider;
@@ -20,7 +21,7 @@ namespace DI.Exercises._2.Tests
             _serviceCollection = new ServiceCollection();
 
             // Inject dependencies
-            // serviceCollection.AddSingleton<IFeedbackProcessor, ?>();
+            _serviceCollection.AddSingleton <IFeedbackProcessor, FeedbackProcessor>();
             // serviceCollection.AddScoped<IFakeDatabase, ?>();
             // serviceCollection.AddTransient<INotifier, ?>();
 
