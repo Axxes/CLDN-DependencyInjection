@@ -1,34 +1,50 @@
 using DI.Exercises._2.Abstractions;
-using DI.Exercises._2.Implementations;
-using DI.Exercises.Shared.Models;
 using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
+using Moq;
+using DI.Exercises.Shared.Models;
+using System.Threading;
 
 namespace DI.Exercises._2.Tests
 {
     public class Tests
     {
+        private IServiceCollection _serviceCollection;
         private IServiceProvider _serviceProvider;
 
         [SetUp]
         public void Setup()
         {
-            var serviceCollection = new ServiceCollection();
+            _serviceCollection = new ServiceCollection();
 
             // Inject dependencies
-            serviceCollection.AddSingleton<IFeedbackProcessor, FeedbackProcessor>();
-            serviceCollection.AddScoped<IFakeDatabase, FakeDatabase>();
-            serviceCollection.AddTransient<INotifier, Notifier>();
+            // serviceCollection.AddSingleton<IFeedbackProcessor, ?>();
+            // serviceCollection.AddScoped<IFakeDatabase, ?>();
+            // serviceCollection.AddTransient<INotifier, ?>();
 
-            _serviceProvider = serviceCollection.BuildServiceProvider();
+            _serviceProvider = _serviceCollection.BuildServiceProvider();
         }
 
         [Test]
         public async Task Test1()
         {
+            var processor = _serviceProvider.GetService<IFeedbackProcessor>();
+
+            var mr = new MockRepository(MockBehavior.Strict);
+
+            var database = mr.Create<IFakeDatabase>();
+            database.Setup(p => p.Save(It.IsAny<Feedback>()));
+            _serviceCollection.AddScoped(_ => database.Object);
+
+            var notifier = mr.Create<INotifier>();
+            notifier.Setup(p => p.Notify(It.IsAny<Feedback>()));
+            _serviceCollection.AddTransient(_ => notifier.Object);
+
+            await processor.StartAsync(CancellationToken.None);
+
+            database.Verify(p => p.Save(It.IsAny<Feedback>()), Times.Exactly(3));
             Assert.Pass();
         }
     }

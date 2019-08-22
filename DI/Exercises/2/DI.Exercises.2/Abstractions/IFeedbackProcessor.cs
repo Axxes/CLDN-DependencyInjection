@@ -1,7 +1,6 @@
 ﻿using DI.Exercises.Shared.Models;
 using Microsoft.Extensions.Hosting;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
 
 namespace DI.Exercises._2.Abstractions
 {

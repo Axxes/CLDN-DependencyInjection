@@ -15,5 +15,13 @@ A console application using .NET Framework 4.8 is given.
 
 ## Exercise 2
 
-A console application using .NET Core 2.2 is given.
+A console application using .NET Core 2.2 is given.  Check the `DI.Exercises.2.Tests` class to inject your dependencies.
 
+1. Create a hosted service called `FeedbackProcessor` , inheriting from `IFeedbackProcessor`
+1.1. Create a new collection to which you can add `DI.Exercises.Shared.Models.Feedback`
+1.2. Wait for three items to be added to the collection
+1.3. Created a new `INotifier` for each item
+1.4. Pass each item into its own Notifier
+
+Write tests to:
+1. Make sure 
