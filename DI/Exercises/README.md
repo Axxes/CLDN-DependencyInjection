@@ -10,8 +10,7 @@ A console application using .NET Framework 4.8 is given.
 4. Add an abstraction layer for the core logic
 5. Switch to dependency injection (Autofac or Microsoft DI)
 6. Write unit tests
-6.1. Make sure `CheckInProcessor.CheckIn` is called with the correct object
-6.2. Make sure `Notifier.Email` is called with the correct arguments
+6.1. Make sure `Notifier.Email` is called with the correct arguments
 
 ## Exercise 2
 
