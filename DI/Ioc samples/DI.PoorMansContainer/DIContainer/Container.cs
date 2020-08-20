@@ -15,8 +15,8 @@ namespace DI.PoorMansContainer
         public void Register<T, U>()
             where U : class, new()
         {
-            Type abstractionType = typeof(T);
-            Type concreteType = typeof(U);
+            var abstractionType = typeof(T);
+            var concreteType = typeof(U);
 
             Register(abstractionType, concreteType);
         }
