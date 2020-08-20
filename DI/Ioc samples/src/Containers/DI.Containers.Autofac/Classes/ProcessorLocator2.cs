@@ -1,4 +1,5 @@
 using Autofac;
+using DI.Containers.Autofac;
 
 namespace DI
 {

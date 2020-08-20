@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DI.Containers.Core\DI.Containers.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="StructureMap" Version="4.7.1" />
+      <PackageReference Include="StructureMap.Microsoft.DependencyInjection" Version="2.0.0" />
+    </ItemGroup>
+
+</Project>

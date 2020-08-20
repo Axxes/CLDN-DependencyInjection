@@ -11,11 +11,11 @@ namespace DI
         {
             ConstructorInfo constructorToResolve = null;
 
-            ConstructorInfo[] constructors = targetType.GetConstructors();
+            var constructors = targetType.GetConstructors();
 
-            foreach (ConstructorInfo constructor in constructors)
+            foreach (var constructor in constructors)
             {
-                object[] attributes = constructor.GetCustomAttributes(typeof(AwesomeConstructorAttribute), false);
+                var attributes = constructor.GetCustomAttributes(typeof(AwesomeConstructorAttribute), false);
                 if (attributes != null && attributes.Count() > 0)
                 {
                     constructorToResolve = constructor;

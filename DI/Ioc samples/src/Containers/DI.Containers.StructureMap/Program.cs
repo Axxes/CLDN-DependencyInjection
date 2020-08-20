@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using StructureMap;
 using System;
+using DI.Core;
 
-namespace DI.Core.StructureMap
+namespace DI.Containers.StructureMap
 {
     internal static class Program
     {
-        private static void Main()
+        static void Main()
         {
             var serviceProvider = new ServiceCollection();
 
@@ -25,7 +26,7 @@ namespace DI.Core.StructureMap
             Console.WriteLine(".NET Core DI Container with StructureMap Example");
             Console.WriteLine();
 
-            OrderInfo orderInfo = new OrderInfo()
+            var orderInfo = new OrderInfo()
             {
                 CustomerName = "Miguel Castro",
                 Email = "miguel@dotnetdude.com",
@@ -37,7 +38,7 @@ namespace DI.Core.StructureMap
             Console.WriteLine("Production:");
             Console.WriteLine();
 
-            Commerce commerce = container.GetInstance<Commerce>();
+            var commerce = container.GetInstance<Commerce>();
             commerce.ProcessOrder(orderInfo);
 
             Console.WriteLine();

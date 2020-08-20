@@ -17,7 +17,7 @@ namespace DI
 
         public void ProcessOrder(OrderInfo orderInfo)
         {
-            IBillingProcessor billingProcessor = _BillingProcessorLocator.GetBillingProcessor();
+            var billingProcessor = _BillingProcessorLocator.GetBillingProcessor();
 
             billingProcessor.ProcessPayment(orderInfo.CustomerName, orderInfo.CreditCard, orderInfo.Price);
             _Logger.Log("Billing processed");

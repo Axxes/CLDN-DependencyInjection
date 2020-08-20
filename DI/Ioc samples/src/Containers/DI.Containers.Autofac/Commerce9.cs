@@ -25,10 +25,10 @@ namespace DI
 
         public void ProcessOrder(OrderInfo orderInfo)
         {
-            IBillingProcessor billingProcessor = _ProcessorLocator.GetProcessor<IBillingProcessor>();
-            ICustomerProcessor customerProcessor = _ProcessorLocator.GetProcessor<ICustomerProcessor>();
-            INotificationProcessor notificationProcessor = _ProcessorLocator.GetProcessor<INotificationProcessor>();
-            ILoggingProcessor loggingProcessor = _ProcessorLocator.GetProcessor<ILoggingProcessor>();
+            var billingProcessor = _ProcessorLocator.GetProcessor<IBillingProcessor>();
+            var customerProcessor = _ProcessorLocator.GetProcessor<ICustomerProcessor>();
+            var notificationProcessor = _ProcessorLocator.GetProcessor<INotificationProcessor>();
+            var loggingProcessor = _ProcessorLocator.GetProcessor<ILoggingProcessor>();
 
             billingProcessor.ProcessPayment(orderInfo.CustomerName, orderInfo.CreditCard, orderInfo.Price);
             loggingProcessor.Log("Billing processed");
@@ -37,7 +37,7 @@ namespace DI
             notificationProcessor.SendReceipt(orderInfo);
             loggingProcessor.Log("Receipt sent");
 
-            foreach (IPostOrderPlugin plugin in _Plugins)
+            foreach (var plugin in _Plugins)
             {
                 plugin.DoSomething();
             }
