@@ -8,13 +8,10 @@ namespace PoetryReaderApi.Controllers
     public class ValuesController : Controller
     {
         private IPoetryRepository _poetryRepository;
-        private ILogger _logger;
 
-        public ValuesController(IPoetryRepository repo, ILogger logger)
+        public ValuesController(IPoetryRepository repo)
         {
-            //TODO: check injected dependencies against NULL
             _poetryRepository = repo;
-            _logger = logger;
         }
 
         // GET api/values

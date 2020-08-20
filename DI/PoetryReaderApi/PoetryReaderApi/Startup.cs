@@ -1,13 +1,10 @@
-﻿using System;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using StructureMap;
-using PoetryReader.Api;
-using System.Diagnostics;
+using Microsoft.Extensions.Hosting;
 using PoetryReader.Core;
-using PoetryReader.Infrastructure;
+using PoetryReader.Infrastructure.DataAccess;
 
 namespace PoetryReaderApi
 {
@@ -21,36 +18,27 @@ namespace PoetryReaderApi
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddControllers();
 
-            var container = new Container();
-
-            container.Configure(config =>
-            {
-                config.AddRegistry<DefaultRegistry>();
-                config.AddRegistry<InfrastructureRegistry>();
-;
-                //Populate the container using the service collection
-                config.Populate(services);
-            });
-
-            Debug.WriteLine(container.WhatDidIScan());
-
-            return container.GetInstance<IServiceProvider>();
-
+            services.AddTransient<IPoetryRepository, InMemoryPoetryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+            
+            app.UseRouting();
 
-            app.UseMvc();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

@@ -7,7 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Api", "PoetryR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Core", "PoetryReader.Core\PoetryReader.Core.csproj", "{6DED2C1B-FC60-49AC-9D01-FA3317B45BF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Infrastructure", "PoetryReader.Infrastructure\PoetryReader.Infrastructure.csproj", "{FDE66928-CD19-4D92-9C9F-6346BADD0ED8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Infrastructure.DataAccess", "PoetryReader.Infrastructure.DataAccess\PoetryReader.Infrastructure.DataAccess.csproj", "{FDE66928-CD19-4D92-9C9F-6346BADD0ED8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{791C038E-7510-4782-8A89-D94EDE843452}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{95E97F44-A574-422F-86E6-DF5BFE9FBFB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,5 +37,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {502E6A8C-C287-4752-A6B9-4D5FD270A44F}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FDE66928-CD19-4D92-9C9F-6346BADD0ED8} = {791C038E-7510-4782-8A89-D94EDE843452}
+		{6DED2C1B-FC60-49AC-9D01-FA3317B45BF3} = {95E97F44-A574-422F-86E6-DF5BFE9FBFB3}
 	EndGlobalSection
 EndGlobal
