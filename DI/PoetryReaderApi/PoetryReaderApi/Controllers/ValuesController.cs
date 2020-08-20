@@ -1,24 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PoetryReader.Core;
+using PoetryReader.Api.Repository;
 
-namespace PoetryReaderApi.Controllers
+namespace PoetryReader.Api.Controllers
 {
 
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private IPoetryRepository _poetryRepository;
-
-        public ValuesController(IPoetryRepository repo)
-        {
-            _poetryRepository = repo;
-        }
-
         // GET api/values
         [HttpGet]
         public string Get()
         {
-            return _poetryRepository.GetAPoem();
+            var poetryRepository = new InMemoryPoetryRepository();
+            return poetryRepository.GetAPoem();
         }
 
         // GET api/values/5

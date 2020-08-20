@@ -1,8 +1,6 @@
-﻿using PoetryReader.Core;
-
-namespace PoetryReader.Infrastructure.DataAccess
+﻿namespace PoetryReader.Api.Repository
 {
-    public class InMemoryPoetryRepository: IPoetryRepository
+    public class InMemoryPoetryRepository
     {
         public string GetAPoem()
         {
