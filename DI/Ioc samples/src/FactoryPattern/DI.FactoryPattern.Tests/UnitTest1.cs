@@ -1,3 +1,4 @@
+using System;
 using DI.FactoryPattern.FoodFactories;
 using NUnit.Framework;
 
@@ -16,7 +17,7 @@ namespace DI.FactoryPattern.Tests
 
         private static IFoodFactory CreateFoodFactory()
         {
-            return new OrganicFoodFactory();
+            throw new NotImplementedException();
         }
     }
 }
