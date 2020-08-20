@@ -1,6 +1,6 @@
-﻿using FactoryPattern.Food;
+﻿using DI.FactoryPattern.Food;
 
-namespace FactoryPattern.FoodFactories
+namespace DI.FactoryPattern.FoodFactories
 {
     public class OrganicFoodFactory : IFoodFactory
     {

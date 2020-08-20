@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace FactoryPattern.Food
+namespace DI.FactoryPattern.Food
 {
     public class CurlyFries : IFood
     {

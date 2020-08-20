@@ -1,4 +1,4 @@
-﻿namespace FactoryPattern.Food
+﻿namespace DI.FactoryPattern.Food
 {
     public interface IFood
     {
