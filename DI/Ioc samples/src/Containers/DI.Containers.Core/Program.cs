@@ -9,13 +9,7 @@ namespace DI.Core
     {
         private static void Main(string[] args)
         {
-            var serviceProvider = new ServiceCollection()
-                .AddTransient<IBillingProcessor, BillingProcessor>()
-                .AddTransient<ICustomer, Customer>()
-                .AddTransient<INotifier, Notifier>()
-                .AddTransient<ILogger, Logger>()
-                .AddTransient<Commerce>()
-                .BuildServiceProvider();
+            // Setup DI
 
             Console.WriteLine(".NET Core DI Container Example");
             Console.WriteLine();
@@ -32,8 +26,7 @@ namespace DI.Core
             Console.WriteLine("Production:");
             Console.WriteLine();
 
-            Commerce commerce = serviceProvider.GetService<Commerce>();
-            commerce.ProcessOrder(orderInfo);
+            // commerce.ProcessOrder(orderInfo);
 
             Console.WriteLine();
             Console.WriteLine("Press [Enter] to exit...");
