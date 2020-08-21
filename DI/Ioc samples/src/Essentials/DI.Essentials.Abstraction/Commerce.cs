@@ -1,31 +1,30 @@
-using DI.Essentials.Abstraction.Interfaces;
+using DI.Essentials.Abstraction.Classes;
 
 namespace DI.Essentials.Abstraction
 {
     public class Commerce
     {
-        public Commerce(IBillingProcessor billingProcessor,
-            ICustomer customer, INotifier notifier, ILogger logger)
+        public Commerce()
         {
-            _BillingProcessor = billingProcessor;
-            _Customer = customer;
-            _Notifier = notifier;
-            _Logger = logger;
+            _billingProcessor = new BillingProcessor();
+            _customer = new Customer();
+            _notifier = new Notifier();
+            _logger = new Logger();
         }
 
-        private readonly IBillingProcessor _BillingProcessor;
-        private readonly ICustomer _Customer;
-        private readonly INotifier _Notifier;
-        private readonly ILogger _Logger;
+        private readonly BillingProcessor _billingProcessor;
+        private readonly Customer _customer;
+        private readonly Notifier _notifier;
+        private readonly Logger _logger;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {
-            _BillingProcessor.ProcessPayment(orderInfo.CustomerName, orderInfo.CreditCard, orderInfo.Price);
-            _Logger.Log("Billing processed");
-            _Customer.UpdateCustomerOrder(orderInfo.CustomerName, orderInfo.Product);
-            _Logger.Log("Customer updated");
-            _Notifier.SendReceipt(orderInfo);
-            _Logger.Log("Receipt sent");
+            _billingProcessor.ProcessPayment(orderInfo.CustomerName, orderInfo.CreditCard, orderInfo.Price);
+            _logger.Log("Billing processed");
+            _customer.UpdateCustomerOrder(orderInfo.CustomerName, orderInfo.Product);
+            _logger.Log("Customer updated");
+            _notifier.SendReceipt(orderInfo);
+            _logger.Log("Receipt sent");
         }
     }
 }

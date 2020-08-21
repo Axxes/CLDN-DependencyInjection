@@ -1,5 +1,4 @@
 ﻿using System;
-using DI.Essentials.Abstraction.Classes;
 
 namespace DI.Essentials.Abstraction
 {
@@ -7,7 +6,7 @@ namespace DI.Essentials.Abstraction
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("ABSTRACTION Example");
+            Console.WriteLine("COUPLED Example");
             Console.WriteLine();
 
             var orderInfo = new OrderInfo()
@@ -19,17 +18,16 @@ namespace DI.Essentials.Abstraction
                 CreditCard = "1234567890"
             };
 
-            Console.WriteLine("Production:");
-            Console.WriteLine();
-            var commerce = new Commerce(new BillingProcessor(),
-                new Customer(),
-                new Notifier(),
-                new Logger());
+            var commerce = new Commerce();
+
             commerce.ProcessOrder(orderInfo);
 
             Console.WriteLine();
             Console.WriteLine("Press [Enter] to exit...");
             Console.ReadLine();
+
+            //It's clear higher modules depend on lower modules
+            //No abstractions
         }
     }
 }

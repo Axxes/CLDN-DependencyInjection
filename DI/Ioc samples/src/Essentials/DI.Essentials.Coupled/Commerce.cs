@@ -6,25 +6,25 @@ namespace DI.Essentials.Coupled
     {
         public Commerce()
         {
-            _BillingProcessor = new BillingProcessor();
-            _Customer = new Customer();
-            _Notifier = new Notifier();
-            _Logger = new Logger();
+            _billingProcessor = new BillingProcessor();
+            _customer = new Customer();
+            _notifier = new Notifier();
+            _logger = new Logger();
         }
 
-        private readonly BillingProcessor _BillingProcessor;
-        private readonly Customer _Customer;
-        private readonly Notifier _Notifier;
-        private readonly Logger _Logger;
+        private readonly BillingProcessor _billingProcessor;
+        private readonly Customer _customer;
+        private readonly Notifier _notifier;
+        private readonly Logger _logger;
 
         public void ProcessOrder(OrderInfo orderInfo)
         {
-            _BillingProcessor.ProcessPayment(orderInfo.CustomerName, orderInfo.CreditCard, orderInfo.Price);
-            _Logger.Log("Billing processed");
-            _Customer.UpdateCustomerOrder(orderInfo.CustomerName, orderInfo.Product);
-            _Logger.Log("Customer updated");
-            _Notifier.SendReceipt(orderInfo);
-            _Logger.Log("Receipt sent");
+            _billingProcessor.ProcessPayment(orderInfo.CustomerName, orderInfo.CreditCard, orderInfo.Price);
+            _logger.Log("Billing processed");
+            _customer.UpdateCustomerOrder(orderInfo.CustomerName, orderInfo.Product);
+            _logger.Log("Customer updated");
+            _notifier.SendReceipt(orderInfo);
+            _logger.Log("Receipt sent");
         }
     }
 }

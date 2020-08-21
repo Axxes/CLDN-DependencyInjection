@@ -1,11 +1,10 @@
 using System;
-using DI.Essentials.Abstraction.Interfaces;
 
 namespace DI.Essentials.Abstraction.Classes
 {
-    public class Notifier : INotifier
+    public class Notifier
     {
-        void INotifier.SendReceipt(OrderInfo orderInfo)
+        public void SendReceipt(OrderInfo orderInfo)
         {
             // send email to customer with receipt
             Console.WriteLine(string.Format("Receipt sent to customer '{0}' via email.", orderInfo.CustomerName));
