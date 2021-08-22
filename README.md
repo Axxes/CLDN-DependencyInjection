@@ -6,9 +6,9 @@
 
 | Name | Description |
 |--|--|
-| .NET Full Framework | Will be replaced by .NET 5. Windows only. Supports WCF & WPF fully. |
-| .NET Core | Will be replaced by .NET 5. Cross platform. No support for WCF. WPF supported as of 3.0 (Windows only). |
-| .NET Standard | Shared feature set of .NET FF and .NET Core. Libraries written in .NET Standard can be used in both frameworks. Will be replaced by .NET 5. |
+| .NET Full Framework | Replaced by .NET 5/6. Windows only. Supports WCF & WPF fully. |
+| .NET Core | Replaced by .NET 5/6. Cross platform. No support for WCF (server). WPF supported as of 3.0 (Windows only). |
+| .NET Standard | Shared feature set of .NET FF and .NET Core. Libraries written in .NET Standard can be used in both frameworks. Will be replaced by .NET 5/6. |
 
 ## DI Libraries
 
