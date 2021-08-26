@@ -14,7 +14,7 @@ A console application using .NET Framework 4.8 is given.
 
 ## Exercise 2
 
-A console application using .NET Core 2.2 is given.  Check the `DI.Exercises.2.Tests` class to inject your dependencies.
+A console application using .NET 5.0 is given.  Check the `DI.Exercises.2.Tests` class to inject your dependencies.
 **Note**: FeedbackProcessor = Singleton, Notifier = Transient, FakeDatabase = Scoped
 
 1. Create a hosted service called `FeedbackProcessor` , inheriting from `IFeedbackProcessor`
