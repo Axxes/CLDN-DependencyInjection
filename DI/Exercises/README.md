@@ -18,14 +18,14 @@ A console application using .NET 5.0 is given.  Check the `DI.Exercises.2.Tests`
 **Note**: FeedbackProcessor = Singleton, Notifier = Transient, FakeDatabase = Scoped
 
 1. Create a hosted service called `FeedbackProcessor` , inheriting from `IFeedbackProcessor`
-1.1. Create a new collection to which you can add `DI.Exercises.Shared.Models.Feedback`
-1.2. Wait for three items to be added to the collection
-1.3. Created a new `INotifier` for each item
-1.4. Pass each item into its own Notifier
-1.5. Make sure the `FeedbackProcessorTests.AssertNotifyCalledThreeTimesPerBatch` test works.
-2. Implement FakeDatabase
-2.1. A static concurrent list should suffise to store `Feedback`
-3. Every `INotifier` has to pass on it's `Feedback` item to the `FakeDatabase` class. 
+2. Create a new collection to which you can add `DI.Exercises.Shared.Models.Feedback`
+3. Wait for three items to be added to the collection
+4. Created a new `INotifier` for each item
+5. Pass each item into its own Notifier
+6. Make sure the `FeedbackProcessorTests.AssertNotifyCalledThreeTimesPerBatch` test works.
+7. Implement FakeDatabase
+8. A static concurrent list should suffise to store `Feedback`
+9. Every `INotifier` has to pass on it's `Feedback` item to the `FakeDatabase` class. 
 
 Write tests to:
 1. Make sure `Feedback` is properly passed on to `FakeDatabase` from `Notifier`
