@@ -8,9 +8,4 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\PoetryReader.Core\PoetryReader.Core.csproj" />
-    <ProjectReference Include="..\PoetryReader.Infrastructure.DataAccess\PoetryReader.Infrastructure.DataAccess.csproj" />
-  </ItemGroup>
-
 </Project>
