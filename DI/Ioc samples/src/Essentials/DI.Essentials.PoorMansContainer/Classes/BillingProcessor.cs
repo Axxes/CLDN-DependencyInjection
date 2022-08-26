@@ -5,10 +5,17 @@ namespace DI.Essentials.PoorMansContainer.Classes
 {
     public class BillingProcessor : IBillingProcessor
     {
+        private readonly ILogger _logger;
+
+        public BillingProcessor(ILogger logger)
+        {
+            _logger = logger;
+        }
+
         void IBillingProcessor.ProcessPayment(string customer, string creditCard, double price)
         {
             // perform billing gateway processing
-            Console.WriteLine(string.Format("Payment processed for customer '{0}' on credit card '{1}' for {2:c}.", customer, creditCard, price));
+            _logger.Log($"Payment processed for customer '{customer}' on credit card '{creditCard}' for {price:c}.");
         }
     }
 }

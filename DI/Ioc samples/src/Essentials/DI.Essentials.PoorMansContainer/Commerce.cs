@@ -2,7 +2,12 @@ using DI.Essentials.PoorMansContainer.Interfaces;
 
 namespace DI.Essentials.PoorMansContainer
 {
-    public class Commerce
+    public interface ICommerce
+    {
+        void ProcessOrder(OrderInfo orderInfo);
+    }
+
+    public class Commerce : ICommerce
     {
         public Commerce(IBillingProcessor billingProcessor,
             ICustomer customer, INotifier notifier, ILogger logger)

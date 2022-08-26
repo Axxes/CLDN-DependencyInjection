@@ -10,7 +10,7 @@ namespace DI.ServiceLocators.Core.Services
 
         public FooService(IServiceProvider serviceProvider)
         {
-            _barService = serviceProvider.GetService<IBarService>();
+            _barService = serviceProvider.GetRequiredService<IBarService>();
         }
 
         public void Log(string text) => Console.WriteLine(_barService.Trim(text));

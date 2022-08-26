@@ -5,6 +5,24 @@ VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Api", "PoetryReaderApi\PoetryReader.Api.csproj", "{AA0DB036-2DF6-4324-8259-2F2134185A6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Core", "PoetryReader.Core\PoetryReader.Core.csproj", "{036F8C65-7770-4AA2-BE35-C8D3F7E1B236}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A8403C42-11A4-4651-ADA6-A9F8877BDFC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D8DF211E-2965-4BC0-814C-119BDF51595A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Infrastructre.InMemory", "PoetryReader.Infrastructre.InMemory\PoetryReader.Infrastructre.InMemory.csproj", "{6CB29B21-0B9C-408A-9FF9-13F468513A30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.DependencyInjection", "PoetryReader.DependencyInjection\PoetryReader.DependencyInjection.csproj", "{4442E7CB-8A78-43AC-B9CE-665F7ACB8A1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Infrastructure.TheCatApi", "PoetryReader.Infrastructure.TheCatApi\PoetryReader.Infrastructure.TheCatApi.csproj", "{8C0A171E-0745-4AF2-BBB8-075CBC208194}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Core.Models", "PoetryReader.Core.Models\PoetryReader.Core.Models.csproj", "{33364F55-C9C0-4603-8D7F-926380DA6A1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{20ECED2B-8A24-48AC-96C3-F77AF84463F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoetryReader.Application", "PoetryReader.Application\PoetryReader.Application.csproj", "{3D67991E-0990-4201-88F2-E7AB78C71B12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +33,30 @@ Global
 		{AA0DB036-2DF6-4324-8259-2F2134185A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA0DB036-2DF6-4324-8259-2F2134185A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA0DB036-2DF6-4324-8259-2F2134185A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036F8C65-7770-4AA2-BE35-C8D3F7E1B236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036F8C65-7770-4AA2-BE35-C8D3F7E1B236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036F8C65-7770-4AA2-BE35-C8D3F7E1B236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036F8C65-7770-4AA2-BE35-C8D3F7E1B236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB29B21-0B9C-408A-9FF9-13F468513A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB29B21-0B9C-408A-9FF9-13F468513A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB29B21-0B9C-408A-9FF9-13F468513A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB29B21-0B9C-408A-9FF9-13F468513A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4442E7CB-8A78-43AC-B9CE-665F7ACB8A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4442E7CB-8A78-43AC-B9CE-665F7ACB8A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4442E7CB-8A78-43AC-B9CE-665F7ACB8A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4442E7CB-8A78-43AC-B9CE-665F7ACB8A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C0A171E-0745-4AF2-BBB8-075CBC208194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C0A171E-0745-4AF2-BBB8-075CBC208194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C0A171E-0745-4AF2-BBB8-075CBC208194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C0A171E-0745-4AF2-BBB8-075CBC208194}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33364F55-C9C0-4603-8D7F-926380DA6A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33364F55-C9C0-4603-8D7F-926380DA6A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33364F55-C9C0-4603-8D7F-926380DA6A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33364F55-C9C0-4603-8D7F-926380DA6A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D67991E-0990-4201-88F2-E7AB78C71B12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D67991E-0990-4201-88F2-E7AB78C71B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D67991E-0990-4201-88F2-E7AB78C71B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D67991E-0990-4201-88F2-E7AB78C71B12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -23,5 +65,10 @@ Global
 		SolutionGuid = {502E6A8C-C287-4752-A6B9-4D5FD270A44F}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{036F8C65-7770-4AA2-BE35-C8D3F7E1B236} = {A8403C42-11A4-4651-ADA6-A9F8877BDFC5}
+		{6CB29B21-0B9C-408A-9FF9-13F468513A30} = {D8DF211E-2965-4BC0-814C-119BDF51595A}
+		{8C0A171E-0745-4AF2-BBB8-075CBC208194} = {D8DF211E-2965-4BC0-814C-119BDF51595A}
+		{33364F55-C9C0-4603-8D7F-926380DA6A1D} = {A8403C42-11A4-4651-ADA6-A9F8877BDFC5}
+		{3D67991E-0990-4201-88F2-E7AB78C71B12} = {20ECED2B-8A24-48AC-96C3-F77AF84463F2}
 	EndGlobalSection
 EndGlobal

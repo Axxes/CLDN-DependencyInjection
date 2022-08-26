@@ -8,4 +8,9 @@ namespace DI.Scenarios.WebAPI.Infra
         Customer GetById(int id);
         List<Customer> GetAll();
     }
+
+    public interface ICustomerRepositoryWrapper : ICustomerRepository
+    {
+        
+    }
 }

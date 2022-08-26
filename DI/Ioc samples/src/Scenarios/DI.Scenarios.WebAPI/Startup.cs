@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DI.Scenarios.WebAPI.Infra;
+using DI.Scenarios.WebAPI.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,7 +29,9 @@ namespace DI.Scenarios.WebAPI
         {
             services.AddControllers();
 
-            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddSingleton<LoggingMiddleware>();
+
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,11 +42,15 @@ namespace DI.Scenarios.WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
+            
+            app.UseMiddleware<LoggingMiddleware>();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }

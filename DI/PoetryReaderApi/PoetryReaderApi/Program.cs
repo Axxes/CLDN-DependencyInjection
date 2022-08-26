@@ -20,6 +20,10 @@ namespace PoetryReaderApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
+                .ConfigureAppConfiguration(x =>
+                {
+                    x.AddEnvironmentVariables();
+                })
                 .Build();
     }
 }
