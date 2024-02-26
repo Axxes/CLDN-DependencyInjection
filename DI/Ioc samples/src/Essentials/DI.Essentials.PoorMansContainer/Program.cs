@@ -14,7 +14,6 @@ namespace DI.Essentials.PoorMansContainer
             container.Register<ICustomer, Customer>();
             container.Register<INotifier, Notifier>();
             container.Register<ILogger, Logger>();
-            container.Register<ICommerce, Commerce>();
 
             Console.WriteLine("Poor-Man's DI Container Example");
             Console.WriteLine();
